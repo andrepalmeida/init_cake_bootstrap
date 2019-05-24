@@ -4,7 +4,7 @@
 namespace App\Controller;
 
 
-class IndexController
+class IndexController extends AppController
 {
     /**
      * Index
