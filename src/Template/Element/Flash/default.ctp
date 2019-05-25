@@ -1,10 +1,14 @@
 <?php
-$class = 'message';
+$class = 'alert';
 if (!empty($params['class'])) {
     $class .= ' ' . $params['class'];
+} else {
+    $class .= ' alert-primary';
 }
+
+
 if (!isset($params['escape']) || $params['escape'] !== false) {
     $message = h($message);
 }
 ?>
-<div class="<?= h($class) ?>" onclick="this.classList.add('hidden');"><?= $message ?></div>
+<div class="<?= h($class) ?>" role="alert"><?= $message ?></div>
